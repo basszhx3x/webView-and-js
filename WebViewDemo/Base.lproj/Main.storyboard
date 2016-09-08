@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xoc-K2-Dmu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6aC-vZ-B8Q">
+            <objects>
+                <navigationController id="xoc-K2-Dmu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hGb-By-z2U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qLm-Ug-er2" kind="relationship" relationship="rootViewController" id="rJl-EO-qfn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3O-7A-nNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2610" y="376"/>
+        </scene>
+        <!--测试WebView-->
+        <scene sceneID="qkW-m6-vQK">
+            <objects>
+                <viewController id="qLm-Ug-er2" customClass="ViewController" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xDk-FK-0G2"/>
+                        <viewControllerLayoutGuide type="bottom" id="GVN-9j-bB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EKn-Px-Anq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-Eb-DPq">
+                                <rect key="frame" x="194" y="161" width="224" height="73"/>
+                                <color key="backgroundColor" red="1" green="0.56285533296597823" blue="0.36399798074103151" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KLD-9o-11w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="JS to OC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toOCButtonHandle:" destination="qLm-Ug-er2" eventType="touchUpInside" id="QYF-d8-o3F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvx-aS-up1">
+                                <rect key="frame" x="194" y="302" width="239" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.49432331397866958" blue="0.67366377510312359" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="OC to JS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toJSButtonHandle:" destination="qLm-Ug-er2" eventType="touchUpInside" id="rjm-tF-1pv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lBi-Eb-DPq" firstAttribute="top" secondItem="xDk-FK-0G2" secondAttribute="bottom" constant="60" id="0YY-Zf-36w"/>
+                            <constraint firstItem="Bvx-aS-up1" firstAttribute="leading" secondItem="lBi-Eb-DPq" secondAttribute="leading" id="290-rH-Yxp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lBi-Eb-DPq" secondAttribute="trailing" constant="20" id="EFG-iL-q2J"/>
+                            <constraint firstItem="Bvx-aS-up1" firstAttribute="height" secondItem="lBi-Eb-DPq" secondAttribute="height" id="LKx-P8-rmE"/>
+                            <constraint firstItem="Bvx-aS-up1" firstAttribute="width" secondItem="lBi-Eb-DPq" secondAttribute="width" id="aAG-tk-S0a"/>
+                            <constraint firstItem="Bvx-aS-up1" firstAttribute="top" secondItem="lBi-Eb-DPq" secondAttribute="bottom" constant="35" id="vCv-iH-bny"/>
+                            <constraint firstItem="lBi-Eb-DPq" firstAttribute="leading" secondItem="EKn-Px-Anq" secondAttribute="leadingMargin" constant="20" id="yxo-WQ-jGt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试WebView" id="J6o-PN-qYF"/>
+                    <connections>
+                        <segue destination="zum-hd-mcL" kind="push" identifier="toOC" id="fSe-Ck-qZk"/>
+                        <segue destination="coF-op-jQw" kind="push" id="mz6-Ao-RHM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y42-iE-7Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1873" y="392"/>
+        </scene>
+        <!--To Web Controller-->
+        <scene sceneID="F3T-LU-RcF">
+            <objects>
+                <viewController id="zum-hd-mcL" customClass="JSToWebController" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v3v-f4-HbO"/>
+                        <viewControllerLayoutGuide type="bottom" id="wn0-e5-Z2O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jWe-Vc-VDx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OPA-1N-XJB">
+                                <rect key="frame" x="0.0" y="69" width="600" height="355"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OPA-1N-XJB" firstAttribute="top" secondItem="v3v-f4-HbO" secondAttribute="bottom" constant="5" id="P72-Sv-Zwu"/>
+                            <constraint firstItem="OPA-1N-XJB" firstAttribute="leading" secondItem="jWe-Vc-VDx" secondAttribute="leading" id="bcA-tZ-D5n"/>
+                            <constraint firstAttribute="trailing" secondItem="OPA-1N-XJB" secondAttribute="trailing" id="gR0-Cm-JtD"/>
+                            <constraint firstItem="wn0-e5-Z2O" firstAttribute="top" secondItem="OPA-1N-XJB" secondAttribute="bottom" constant="200" id="ijE-Sc-z76"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iBk-ht-qu9"/>
+                    <connections>
+                        <outlet property="webView" destination="OPA-1N-XJB" id="q5W-Ae-2ci"/>
+                        <segue destination="RvM-dE-5J5" kind="push" id="bvT-Y3-L0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3a-Lt-Mi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="-80"/>
+        </scene>
+        <!--Push FromJS-->
+        <scene sceneID="ZAy-1g-qH5">
+            <objects>
+                <viewController storyboardIdentifier="jspush" id="RvM-dE-5J5" customClass="PushFromJS" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iJK-LP-sxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="auj-eA-SE6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vBS-mi-Lb3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mVh-5k-eL5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEn-zs-nzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="-90"/>
+        </scene>
+        <!--Web ToJS Controller-->
+        <scene sceneID="YBo-TB-Llc">
+            <objects>
+                <viewController storyboardIdentifier="toJS" id="coF-op-jQw" customClass="WebToJSController" customModule="WebViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ZJ-Xr-Wj3"/>
+                        <viewControllerLayoutGuide type="bottom" id="R8x-Fj-OnZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yXJ-cP-5hr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDN-PT-pJE">
+                                <rect key="frame" x="218" y="278" width="164" height="44"/>
+                                <color key="backgroundColor" red="0.76596345103732111" green="0.70748836954584471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5RS-SS-DVc"/>
+                                    <constraint firstAttribute="width" constant="164" id="MDt-31-mXi"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="调用js并传值">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadWithParameters:" destination="coF-op-jQw" eventType="touchUpInside" id="CKj-jA-923"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zw-tz-Pgq">
+                                <rect key="frame" x="214" y="347" width="172" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XcV-NK-Bsn"/>
+                                    <constraint firstAttribute="width" constant="172" id="ysu-hh-8PQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZDN-PT-pJE" firstAttribute="centerX" secondItem="yXJ-cP-5hr" secondAttribute="centerX" id="3C2-n4-egf"/>
+                            <constraint firstItem="5Zw-tz-Pgq" firstAttribute="top" secondItem="ZDN-PT-pJE" secondAttribute="bottom" constant="25" id="MMN-Xx-NOl"/>
+                            <constraint firstItem="5Zw-tz-Pgq" firstAttribute="centerX" secondItem="ZDN-PT-pJE" secondAttribute="centerX" id="QEo-TB-Ljp"/>
+                            <constraint firstItem="ZDN-PT-pJE" firstAttribute="centerY" secondItem="yXJ-cP-5hr" secondAttribute="centerY" id="bXd-2u-n8f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fnb-iR-rVw"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="5Zw-tz-Pgq" id="tAo-29-DMp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfm-4V-yym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-947" y="597"/>
+        </scene>
+    </scenes>
+</document>
